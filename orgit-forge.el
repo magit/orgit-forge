@@ -1,12 +1,13 @@
 ;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020  The Magit Project Contributors
+;; Copyright (C) 2020-2021  The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Package-Requires: ((emacs "25.1") (forge "0.2.0") (magit "2.90.1") (org "9.3") (orgit "1.6.2"))
 ;; Homepage: https://github.com/magit/orgit-forge
+;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This library is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
