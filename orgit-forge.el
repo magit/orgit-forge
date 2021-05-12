@@ -44,12 +44,12 @@
   :type 'string)
 
 ;;;###autoload
-(eval-after-load "org"
-  '(orgit-link-set-parameters "orgit-topic"
-                              :store    'orgit-topic-store
-                              :follow   'orgit-topic-open
-                              :export   'orgit-topic-export
-                              :complete 'orgit-topic-complete-link))
+(with-eval-after-load "org"
+  (orgit-link-set-parameters "orgit-topic"
+                             :store    'orgit-topic-store
+                             :follow   'orgit-topic-open
+                             :export   'orgit-topic-export
+                             :complete 'orgit-topic-complete-link))
 
 ;;;###autoload
 (defun orgit-topic-store ()
