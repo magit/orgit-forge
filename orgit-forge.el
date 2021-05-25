@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
-;; Package-Requires: ((emacs "25.1") (forge "0.2.0") (magit "2.90.1") (org "9.3") (orgit "1.6.2"))
+;; Package-Requires: ((emacs "25.1") (forge "0.2") (magit "3.0") (org "9.4") (orgit "1.7"))
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
