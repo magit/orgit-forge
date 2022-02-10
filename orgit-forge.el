@@ -1,6 +1,6 @@
 ;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020-2021  The Magit Project Contributors
+;; Copyright (C) 2020-2022  The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
@@ -45,11 +45,11 @@
 
 ;;;###autoload
 (with-eval-after-load "org"
-  (orgit-link-set-parameters "orgit-topic"
-                             :store    'orgit-topic-store
-                             :follow   'orgit-topic-open
-                             :export   'orgit-topic-export
-                             :complete 'orgit-topic-complete-link))
+  (org-link-set-parameters "orgit-topic"
+                           :store    'orgit-topic-store
+                           :follow   'orgit-topic-open
+                           :export   'orgit-topic-export
+                           :complete 'orgit-topic-complete-link))
 
 ;;;###autoload
 (defun orgit-topic-store ()
