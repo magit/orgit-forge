@@ -5,12 +5,19 @@ PKG = orgit-forge
 ELS   = $(PKG).el
 ELCS  = $(ELS:.el=.elc)
 
-DEPS  = dash
+DEPS  = closql
+DEPS += dash
+DEPS += emacsql
+DEPS += forge/lisp
+DEPS += ghub/lisp
 DEPS += magit/lisp
+DEPS += markdown-mode
 DEPS += org/lisp
 DEPS += orgit
 DEPS += transient/lisp
-DEPS += with-editor
+DEPS += treepy
+DEPS += with-editor/lisp
+DEPS += yaml
 
 EMACS      ?= emacs
 EMACS_ARGS ?=
