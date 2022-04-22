@@ -6,6 +6,7 @@ ELS   = $(PKG).el
 ELCS  = $(ELS:.el=.elc)
 
 DEPS  = closql
+DEPS += compat
 DEPS += dash
 DEPS += emacsql
 DEPS += forge/lisp

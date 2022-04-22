@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
-;; Package-Requires: ((emacs "25.1") (forge "0.3") (magit "3.3") (org "9.5") (orgit "1.8"))
+;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (forge "0.3") (magit "3.3") (org "9.5") (orgit "1.8"))
 ;; Package-Version: 0.1.3-git
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -29,6 +29,8 @@
 ;; used to link to Forge topic buffers.
 
 ;;; Code:
+
+(require 'compat)
 
 (require 'forge)
 (require 'orgit)
