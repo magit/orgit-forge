@@ -1,27 +1,34 @@
-;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding: t; -*-
+;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2020-2022  The Magit Project Contributors
+;; Copyright (C) 2020-2022 The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
-;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
-
-;; Package-Requires: ((emacs "25.1") (compat "28.1.1.0") (forge "0.3") (magit "3.3") (org "9.5") (orgit "1.8"))
-;; Package-Version: 0.1.3-git
 ;; Homepage: https://github.com/magit/orgit-forge
+;; Keywords: hypermedia vc
+
+;; Package-Version: 0.1.3-git
+;; Package-Requires: (
+;;     (emacs "25.1")
+;;     (compat "28.1.1.0")
+;;     (forge "0.3")
+;;     (magit "3.3")
+;;     (org "9.5")
+;;     (orgit "1.8"))
+
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
-;; This library is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation; either version 3, or (at your option)
-;; any later version.
+;; This file is free software: you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published
+;; by the Free Software Foundation, either version 3 of the License,
+;; or (at your option) any later version.
 ;;
-;; This library is distributed in the hope that it will be useful,
+;; This file is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
 ;;
 ;; You should have received a copy of the GNU General Public License
-;; along with this library.  If not, see http://www.gnu.org/licenses.
+;; along with this file.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
