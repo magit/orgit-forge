@@ -7,3 +7,8 @@ package, which links to various Magit buffers.
 Links have the form ~orgit-topic:HASH~.
 
 Note that I do not intend to support any other Forge buffer types.
+
+#+html: <br><br>
+#+html: <a href="https://github.com/magit/orgit-forge/actions/workflows/compile.yml"><img alt="Compile" src="https://github.com/magit/orgit-forge/actions/workflows/compile.yml/badge.svg"/></a>
+#+html: <a href="https://stable.melpa.org/#/orgit-forge"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/orgit-forge-badge.svg"/></a>
+#+html: <a href="https://melpa.org/#/orgit-forge"><img alt="MELPA" src="https://melpa.org/packages/orgit-forge-badge.svg"/></a>
