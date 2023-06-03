@@ -70,12 +70,12 @@ Forge-Topic mode buffer for that topic."
   (cond ((eq major-mode 'forge-topic-mode)
          (orgit-topic-store-1 forge-buffer-topic))
         ((derived-mode-p 'magit-mode)
-         (when-let* ((sections (or (magit-region-sections 'issue)
+         (and-let* ((sections (or (magit-region-sections 'issue)
                                   (magit-region-sections 'pullreq))))
-           ;; Cannot use and-let* because of debbugs#31840.
-           (dolist (section sections)
-             (orgit-topic-store-1 (oref section value)))
-           t))
+           (progn ; Work around debbugs#31840.
+             (dolist (section sections)
+               (orgit-topic-store-1 (oref section value)))
+             t)))
         ((derived-mode-p 'forge-topic-list-mode)
          (orgit-topic-store-1 (forge-get-topic (tabulated-list-get-id))))))
 
