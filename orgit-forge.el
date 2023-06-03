@@ -9,11 +9,11 @@
 ;; Package-Version: 0.1.3.50-git
 ;; Package-Requires: (
 ;;     (emacs "25.1")
-;;     (compat "29.1.3.4")
+;;     (compat "29.1.4.1")
 ;;     (forge "0.3")
 ;;     (magit "3.3")
-;;     (org "9.5")
-;;     (orgit "1.8"))
+;;     (org "9.6")
+;;     (orgit "1.9"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
