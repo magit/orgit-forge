@@ -42,13 +42,16 @@
 (require 'forge)
 (require 'orgit)
 
-(defcustom orgit-topic-description-format "%P%N %T"
+(defcustom orgit-topic-description-format "%S %T"
   "Format used for `orgit-topic' links.
 %o Owner of repository.
 %n Name of repository.
+%T Title of topic.
+%S Slug of topic.
+   Example: \"#123\".  Same as %P%N.
+These two are preserved for backward compatibly:
 %P Type prefix of topic.
-%N Number of topic.
-%T Title of topic."
+%N Number of topic."
   :package-version '(orgit-forge . "0.1.0")
   :group 'orgit
   :type 'string)
@@ -87,13 +90,14 @@ Forge-Topic mode buffer for that topic."
                   (format-spec orgit-topic-description-format
                                `((?o . ,(oref repo owner))
                                  (?n . ,(oref repo name))
-                                 (?P . ,(forge--topic-type-prefix topic))
-                                 (?N . ,(oref topic number))
-                                 (?T . ,(oref topic title)))))))
+                                 (?T . ,(oref topic title))
+                                 (?S . ,(oref topic slug))
+                                 (?P . ,(substring (oref topic slug) 0 1))
+                                 (?N . ,(oref topic number)))))))
 
 ;;;###autoload
 (defun orgit-topic-open (id)
-  (forge-visit (forge-get-topic id)))
+  (forge-topic-setup-buffer (forge-get-topic id)))
 
 ;;;###autoload
 (defun orgit-topic-export (id desc format)
