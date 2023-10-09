@@ -70,7 +70,7 @@ These two are preserved for backward compatibly:
 
 When the region selects a topic, then store a link to the
 Forge-Topic mode buffer for that topic."
-  (cond ((eq major-mode 'forge-topic-mode)
+  (cond ((derived-mode-p 'forge-topic-mode)
          (orgit-topic-store-1 forge-buffer-topic))
         ((derived-mode-p 'magit-mode)
          (and-let* ((sections (or (magit-region-sections 'issue)
