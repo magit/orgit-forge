@@ -59,10 +59,11 @@ These two are preserved for backward compatibly:
 ;;;###autoload
 (with-eval-after-load "org"
   (org-link-set-parameters "orgit-topic"
-                           :store    #'orgit-topic-store
-                           :follow   #'orgit-topic-open
-                           :export   #'orgit-topic-export
-                           :complete #'orgit-topic-complete-link))
+                           :store              #'orgit-topic-store
+                           :follow             #'orgit-topic-open
+                           :export             #'orgit-topic-export
+                           :complete           #'orgit-topic-complete-link
+                           :insert-description #'orgit-topic-describe-link))
 
 ;;;###autoload
 (defun orgit-topic-store ()
@@ -86,14 +87,17 @@ Forge-Topic mode buffer for that topic."
   (org-link-store-props
    :type "orgit-topic"
    :link (format "orgit-topic:%s" (oref topic id))
-   :description (let ((repo (forge-get-repository topic)))
-                  (format-spec orgit-topic-description-format
-                               `((?o . ,(oref repo owner))
-                                 (?n . ,(oref repo name))
-                                 (?T . ,(oref topic title))
-                                 (?S . ,(oref topic slug))
-                                 (?P . ,(substring (oref topic slug) 0 1))
-                                 (?N . ,(oref topic number)))))))
+   :description (orgit--topic-format-description topic)))
+
+(defun orgit--topic-format-description (topic)
+  (let ((repo (forge-get-repository topic)))
+    (format-spec orgit-topic-description-format
+                 `((?o . ,(oref repo owner))
+                   (?n . ,(oref repo name))
+                   (?T . ,(oref topic title))
+                   (?S . ,(oref topic slug))
+                   (?P . ,(substring (oref topic slug) 0 1))
+                   (?N . ,(oref topic number))))))
 
 ;;;###autoload
 (defun orgit-topic-open (id)
@@ -110,6 +114,12 @@ Forge-Topic mode buffer for that topic."
   (format "orgit-topic:%s"
           (let ((default-directory (magit-read-repository arg)))
             (oref (forge-get-topic (forge-read-topic "Topic")) id))))
+
+;;;###autoload
+(defun orgit-topic-describe-link (link default)
+  (or default
+      (orgit--topic-format-description
+       (forge-get-topic (string-remove-prefix "orgit-topic:" link)))))
 
 ;;; _
 (provide 'orgit-forge)
