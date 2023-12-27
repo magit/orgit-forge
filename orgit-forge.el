@@ -86,7 +86,7 @@ Forge-Topic mode buffer for that topic."
   (org-link-store-props
    :type "orgit-topic"
    :link (format "orgit-topic:%s" (oref topic id))
-   :description (let ((repo (forge-get-repository t)))
+   :description (let ((repo (forge-get-repository topic)))
                   (format-spec orgit-topic-description-format
                                `((?o . ,(oref repo owner))
                                  (?n . ,(oref repo name))
