@@ -1,6 +1,6 @@
 ;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding:t -*-
 
-;; Copyright (C) 2020-2023 The Magit Project Contributors
+;; Copyright (C) 2020-2024 The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/magit/orgit-forge
