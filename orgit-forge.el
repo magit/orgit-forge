@@ -113,7 +113,7 @@ Forge-Topic mode buffer for that topic."
 (defun orgit-topic-complete-link (&optional arg)
   (format "orgit-topic:%s"
           (let ((default-directory (magit-read-repository arg)))
-            (oref (forge-get-topic (forge-read-topic "Topic")) id))))
+            (forge-read-topic "Topic"))))
 
 ;;;###autoload
 (defun orgit-topic-describe-link (link default)
