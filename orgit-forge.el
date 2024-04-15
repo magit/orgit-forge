@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2020-2024 The Magit Project Contributors
 
-;; Author: Jonas Bernoulli <jonas@bernoul.li>
+;; Author: Jonas Bernoulli <emacs.orgit-forge@jonas.bernoulli.dev>
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; Keywords: hypermedia vc
 
