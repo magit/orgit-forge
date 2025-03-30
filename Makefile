@@ -11,6 +11,7 @@ DEPS += dash
 DEPS += emacsql
 DEPS += forge/lisp
 DEPS += ghub/lisp
+DEPS += llama
 DEPS += magit/lisp
 DEPS += markdown-mode
 DEPS += org/lisp
