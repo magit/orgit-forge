@@ -8,12 +8,12 @@
 
 ;; Package-Version: 1.0.0
 ;; Package-Requires: (
-;;     (emacs "27.1")
-;;     (compat "30.0.0.0")
-;;     (forge "0.4.0")
-;;     (magit "4.0.0")
-;;     (org "9.7.8")
-;;     (orgit "2.0.0"))
+;;     (emacs "29.1")
+;;     (compat "30.0.2.0")
+;;     (forge "0.5.0")
+;;     (magit "4.3.2")
+;;     (org "9.7.26")
+;;     (orgit "2.0.2"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
