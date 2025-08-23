@@ -8,7 +8,6 @@ ELCS  = $(ELS:.el=.elc)
 DEPS  = closql
 DEPS += compat
 DEPS += cond-let
-DEPS += dash
 DEPS += emacsql
 DEPS += forge/lisp
 DEPS += ghub/lisp
