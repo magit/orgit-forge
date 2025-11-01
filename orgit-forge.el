@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; Keywords: hypermedia vc
 
-;; Package-Version: 1.0.3
+;; Package-Version: 1.1.0
 ;; Package-Requires: (
 ;;     (emacs  "29.1")
 ;;     (compat "30.1")
