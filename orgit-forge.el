@@ -10,10 +10,10 @@
 ;; Package-Requires: (
 ;;     (emacs  "29.1")
 ;;     (compat "30.1")
-;;     (forge   "0.5")
-;;     (magit   "4.3")
+;;     (forge   "0.6")
+;;     (magit   "4.4")
 ;;     (org     "9.7")
-;;     (orgit   "2.0"))
+;;     (orgit   "2.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
