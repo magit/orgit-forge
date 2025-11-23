@@ -8,12 +8,13 @@
 
 ;; Package-Version: 1.1.0
 ;; Package-Requires: (
-;;     (emacs  "29.1")
-;;     (compat "30.1")
-;;     (forge   "0.6")
-;;     (magit   "4.4")
-;;     (org     "9.7")
-;;     (orgit   "2.1"))
+;;     (emacs   "29.1")
+;;     (compat  "30.1")
+;;     (cond-let "0.2")
+;;     (forge    "0.6")
+;;     (magit    "4.4")
+;;     (org      "9.7")
+;;     (orgit    "2.1"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -38,6 +39,7 @@
 ;;; Code:
 
 (require 'compat)
+(require 'cond-let)
 
 (require 'forge)
 (require 'orgit)
@@ -71,17 +73,16 @@ These two are preserved for backward compatibly:
 
 When the region selects a topic, then store a link to the
 Forge-Topic mode buffer for that topic."
-  (cond ((derived-mode-p 'forge-topic-mode)
-         (orgit-topic-store-1 forge-buffer-topic))
-        ((derived-mode-p 'magit-mode)
-         (and-let* ((sections (or (magit-region-sections 'issue)
-                                  (magit-region-sections 'pullreq))))
-           (progn ; Work around debbugs#31840.
+  (cond-let ((derived-mode-p 'forge-topic-mode)
+             (orgit-topic-store-1 forge-buffer-topic))
+            ((derived-mode-p 'forge-topic-list-mode)
+             (orgit-topic-store-1 (forge-get-topic (tabulated-list-get-id))))
+            ([_(derived-mode-p 'magit-mode)]
+             [sections (or (magit-region-sections 'issue)
+                           (magit-region-sections 'pullreq))]
              (dolist (section sections)
                (orgit-topic-store-1 (oref section value)))
              t)))
-        ((derived-mode-p 'forge-topic-list-mode)
-         (orgit-topic-store-1 (forge-get-topic (tabulated-list-get-id))))))
 
 (defun orgit-topic-store-1 (topic)
   (org-link-store-props
