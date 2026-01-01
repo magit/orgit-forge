@@ -126,5 +126,6 @@ Forge-Topic mode buffer for that topic."
 (provide 'orgit-forge)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
+;; lisp-indent-local-overrides: ((cond . 0) (interactive . 0))
 ;; End:
 ;;; orgit-forge.el ends here
