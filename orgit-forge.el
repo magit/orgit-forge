@@ -59,7 +59,7 @@ These two are preserved for backward compatibly:
   :type 'string)
 
 ;;;###autoload
-(with-eval-after-load "org"
+(with-eval-after-load 'org
   (org-link-set-parameters "orgit-topic"
                            :store              #'orgit-topic-store
                            :follow             #'orgit-topic-open
