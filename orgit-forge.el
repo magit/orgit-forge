@@ -105,10 +105,10 @@ Forge-Topic mode buffer for that topic."
   (forge-topic-setup-buffer (forge-get-topic id)))
 
 ;;;###autoload
-(defun orgit-topic-export (id desc format)
-  (orgit--format-export (forge-get-url (forge-get-topic id))
-                        desc
-                        format))
+(defun orgit-topic-export (id desc backend _info)
+  (orgit--format-export backend
+                        (forge-get-url (forge-get-topic id))
+                        desc))
 
 ;;;###autoload
 (defun orgit-topic-complete-link (&optional arg)
