@@ -6,15 +6,15 @@
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; Keywords: hypermedia vc
 
-;; Package-Version: 1.1.2
+;; Package-Version: 1.1.3
 ;; Package-Requires: (
 ;;     (emacs   "29.1")
-;;     (compat  "30.1")
-;;     (cond-let "0.2")
+;;     (compat  "31.0")
+;;     (cond-let "1.1")
 ;;     (forge    "0.6")
-;;     (magit    "4.5")
+;;     (magit    "4.6")
 ;;     (org      "9.8")
-;;     (orgit    "2.1"))
+;;     (orgit    "2.2"))
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
