@@ -106,9 +106,11 @@ Forge-Topic mode buffer for that topic."
 
 ;;;###autoload
 (defun orgit-topic-export (id desc backend _info)
-  (orgit--format-export backend
+  (condition-case nil
+      (orgit--format-export backend
                         (forge-get-url (forge-get-topic id))
-                        desc))
+                        desc)
+    (error (signal 'org-link-broken (list (format "Unable to export topic id: %s, %s " id desc))))))
 
 ;;;###autoload
 (defun orgit-topic-complete-link (&optional arg)
