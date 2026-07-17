@@ -126,6 +126,20 @@ Forge-Topic mode buffer for that topic."
 (provide 'orgit-forge)
 ;; Local Variables:
 ;; indent-tabs-mode: nil
-;; lisp-indent-local-overrides: ((cond . 0) (interactive . 0))
+;; lisp-indent-local-overrides: (
+;;   (cond . 0)
+;;   (interactive . 0))
+;; read-symbol-shorthands: (
+;;   ("and$"       . "cond-let--and$")
+;;   ("thread$"    . "cond-let--thread$")
+;;   ("when$"      . "cond-let--when$")
+;;   ("and-let*"   . "cond-let--and-let*")
+;;   ("and-let"    . "cond-let--and-let")
+;;   ("if-let*"    . "cond-let--if-let*")
+;;   ("if-let"     . "cond-let--if-let")
+;;   ("when-let*"  . "cond-let--when-let*")
+;;   ("when-let"   . "cond-let--when-let")
+;;   ("while-let*" . "cond-let--while-let*")
+;;   ("while-let"  . "cond-let--while-let"))
 ;; End:
 ;;; orgit-forge.el ends here
